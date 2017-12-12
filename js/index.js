@@ -5,7 +5,7 @@ document.write('1.by the first way:'+fibRecurs(n)+'<br>'+
                '3.by the third way:'+fibArr(n));
 
 function fibRecurs(n) {
-    if n<=2 ? 1 : fib(n-1)+fib(n-2);
+    return n<=2 ? 1 : fib(n-1)+fib(n-2);
 }
 
 function fibCircle(n) {
@@ -23,7 +23,7 @@ return prev;
 function fibArr(n) {
     let nums = [1,1];
     for (let i=2; i<n; i++) {
-        nums[i]=nums[i-1]+nums[i-2];
+        nums.push(nums[i-1]+nums[i-2]);
     }
-    return nums[n-1];
+    return nums.pop();
 }
